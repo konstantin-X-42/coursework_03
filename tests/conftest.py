@@ -1,43 +1,4 @@
-import os
-import shutil
-
 import pytest
-
-# from src.db_manager import JsonFileStorage
-
-# =====================================================================
-# Фикстура временного JSON-хранилища
-# Используется в:
-# - test_db_manager.py
-# - test_main.py
-# =====================================================================
-
-
-# @pytest.fixture
-# def temp_storage():
-#     """
-#     Создает временное хранилище JSON для тестов.
-#     После завершения теста удаляет созданную папку.
-#     """
-#
-#     test_dir = "data_test"
-#     test_file = f"{test_dir}/test_flights.json"
-#
-#     storage = JsonFileStorage(filename=test_file)
-#
-#     yield storage
-#
-#     if os.path.exists(test_dir):
-#         shutil.rmtree(test_dir)
-
-
-# =====================================================================
-# Тестовые данные ответа OpenSky API
-# Используется в:
-# - test_api.py
-# - test_main.py
-# =====================================================================
-
 
 @pytest.fixture
 def fake_api_data():

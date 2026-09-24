@@ -41,12 +41,6 @@ class Aeroplane:
             return NotImplemented
         return self.velocity > other.velocity
 
-    # def __eq__(self, other: "Aeroplane") -> bool:
-    #     """Оператор 'равно' (==) — проверяет равенство скоростей."""
-    #     if not isinstance(other, Aeroplane):
-    #         return NotImplemented
-    #     return self.velocity == other.velocity
-
     def __eq__(self, other: object) -> bool:
         """Оператор 'равно' (==) — проверяет равенство скоростей."""
         if not isinstance(other, Aeroplane):
