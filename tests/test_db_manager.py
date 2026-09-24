@@ -91,7 +91,7 @@ def test_get_aeroplanes_with_higher_speed(mock_execute, mock_db_params):
 
 @patch("src.db_manager.DBManager._execute_query")
 def test_get_aeroplanes_with_keyword(mock_execute, mock_db_params):
-    """Проверяет регистронезависимый поиск по ключевому слову в позывном."""
+    """Проверяет регистронезависимый поиск по ключевому слову в позывном"""
     mock_data = [
         {"callsign": "ACA123", "origin_country": "Canada", "velocity": 200.0, "altitude": 9000.0}
     ]
