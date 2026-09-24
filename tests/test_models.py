@@ -3,6 +3,11 @@ import pytest
 from src.models import Aeroplane
 
 # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# poetry run pytest
+
+# подробный отчёт
+# poetry run pytest -v
+
 # запуск тестов в модуле test_models.py с покрытием в html
 # poetry run pytest tests/test_models.py --cov=models --cov-report=html
 # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

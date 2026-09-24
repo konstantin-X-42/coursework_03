@@ -1,7 +1,6 @@
-from unittest.mock import MagicMock, patch
+from unittest.mock import patch
 import pytest
 from src.db_manager import DBManager
-from src.models import Aeroplane
 
 
 @pytest.fixture
