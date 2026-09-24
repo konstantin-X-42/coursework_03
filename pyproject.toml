@@ -1,0 +1,42 @@
+[project]
+name = "pythonproject2"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "konstantin",email = "kostyani4y@yandex.ru"}
+]
+requires-python = "^3.14"
+dependencies = [
+    "requests (>=2.34.2,<3.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "isort (>=8.0.1,<9.0.0)",
+    "black (>=26.5.1,<27.0.0)",
+    "flake8 (>=7.3.0,<8.0.0)",
+    "mypy (>=2.3.0,<3.0.0)",
+    "pytest (>=9.1.1,<10.0.0)",
+    "pytest-cov (>=7.1.0,<8.0.0)",
+    "flake8-pyproject (>=1.2.4,<2.0.0)"
+]
+
+[tool.poetry]  # определяем видимость структуры проекта
+packages = [
+    {include = "src"},
+    {include = "main.py"}
+]
+
+[tool.flake8]
+max-line-length = 119  # длинна строки
+extend-ignore = ["E501", "E402", "F541"]
+#extend-ignore = ["E501"]  # отключает проверку линтерами и форматерами
+
+[tool.mypy]  # исключаем тобы он не ругался на аргументы requests
+ignore_missing_imports = true
+disable_error_code = ["assignment", "arg-type", "index"]
